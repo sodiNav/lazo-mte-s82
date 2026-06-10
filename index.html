@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Palette Town</title>
 
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -16,20 +16,33 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-palette-fill"></i>Palette Town
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Intro</a>
-                <a class="nav-link" href="#">Featured</a>
-                <a class="nav-link" href="#">Categories</a>
-                <a class="nav-link" href="#">Sample Resources</a>
-            </div>
+                <div class="navbar-nav d-inline-flex justify-content-between w-100">
+                    <div class="d-flex">
+                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#introduction">Intro</a>
+                        <a class="nav-link" href="#featured">Featured</a>
+                        <a class="nav-link" href="#categories">Categories</a>
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <form class="d-flex me-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-search" type="button"><i class="bi bi-search"></i></button>
+                        </form>
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-fill fs-5"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -38,107 +51,213 @@
     <div class="container-fluid">
 
         <!-- Home Section -->
-        <section id="home">
-            <div class="row mb-5 py-5">
+        <section id="home" class="mx-sm-3 mx-md-5 mb-4">
+            <div class="row mb-5 py-5 px-2">
                 <div class="col-md-10 p-5 m-5">
                     <h1 class="mb-3" id="banner-title">
-                        Home Section
+                        Your neighborhood guide to mastering the canvas
                     </h1>
                     <p class="mb-5" id="motto">
-                        Home Description
+                        Discover your creative spark right here in the heart of town. We've mapped out the best artist-approved tutorials and techniques to help you master the fundamentals and beyond.
                     </p>
-                    <button class="btn btn-primary btn-lg rounded-pill px-3">
-                    Shop Now!
-                    <i class="bi bi-arrow-right"></i>
+                    <button class="btn btn-primary btn-lg rounded-pill px-4">
+                        Explore Now <i class="bi bi-arrow-right ms-1"></i>
                     </button>
                 </div>
             </div>
+
+            <!-- Introduction Section -->
+            <section id="introduction" class="mb-5 mx-5 px-5">
+                <h2>Slowly Sketch your way to your Greatest Work</h2>
+                <p>
+                    Welcome to Palette Town—a curated, accessible hub designed for anyone who has ever wanted to pick up a pencil or paint a canvas but didn't know where to start. Art can feel overwhelming with all of its rules, techniques, and terminology. Palette Town cuts through the noise by organizing the essential building blocks of drawing, painting, and color theory into easy-to-navigate districts. Think of us as your friendly local guide on your creative journey.
+                </p>
+            </section>
+            <!-- End of Introduction Section -->
+
+            <!-- Featured Section -->
+            <section id="featured" class="my-4 mx-5 px-5">
+                <div class="d-flex justify-content-center gap-5 px-5">
+                    <div>
+                        <div class="card p-3 h-100">
+                            <img
+                                class="img-fluid"
+                                src="https://cdn.mos.cms.futurecdn.net/8ToUvuPXxcD5ANh3D9Sr8L.jpg"
+                                alt="Digital art workspace"
+                            />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-title">Digital Art</p>
+                                <p class="card-text">Software workflows, layer management, tablet configuration, and digital brush techniques.</p>
+                                <button class="btn btn-primary w-100 mt-auto">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card p-3 h-100">
+                            <img
+                                class="img-fluid"
+                                src="https://stationers.pk/cdn/shop/articles/Acrylic_Paint_Origin_And_Making..jpg?v=1633529069"
+                                alt="Traditional art supplies"
+                            />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-title">Traditional Art</p>
+                                <p class="card-text">Pencil sketching, ink work, acrylic/oil/watercolor techniques, and surface textures.</p>
+                                <button class="btn btn-primary w-100 mt-auto">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card p-3 h-100">
+                            <img
+                                class="img-fluid"
+                                src="https://blog.pixelfreestudio.com/wp-content/uploads/2024/07/lD9mV-1.jpg"
+                                alt="Studio fundamentals"
+                            />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-title">Studio Fundamentals</p>
+                                <p class="card-text">Color theory, perspective, light and shadow, and anatomical proportions.</p>
+                                <button class="btn btn-primary w-100 mt-auto">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Featured Section -->
+
         </section>
         <!-- End of Home Section -->
-    
-        <!-- Introduction Section -->
-        <section id="introduction" class="row mx-sm-3 mx-md-5">
-            <h2>Introduction Section</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis fugit explicabo itaque consequuntur quia earum nemo quisquam repudiandae vel, recusandae quidem saepe delectus tempora iste perferendis voluptatem repellat incidunt magni. Nobis quaerat inventore tempore impedit doloribus voluptas cupiditate voluptatem rerum quos, facere qui quas aspernatur, maxime dolores deleniti laboriosam dicta.</p>
-            <p>Headline</p>
-        </section>
-        <!-- End of Introduction Section -->
-    
-        <!-- Featured Section -->
-        <section class="featured" class="row mx-sm-3 mx-md-5">
-            <h2>Featured Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt a, ipsa reiciendis officia ex culpa, velit aliquam iusto quae esse. Officia quibusdam adipisci sit facilis voluptatum voluptate ducimus, esse minima minus expedita! Quam praesentium placeat doloribus nisi! Cum illo quidem consectetur quisquam nisi iste unde ab numquam voluptatibus minus?</p>
-        </section>
-        <!-- End of Featured Section -->
-    
-        <!-- Category Section -->
-        <section id="categories-section" class="row mx-sm-3 mx-md-5">
-            <h2>Categories Section</h2>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-                <div class="card">
-                    <img src="./assets/images/zeztz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Zeztz Driver</p>
-                        <p class="card-text">$300.00</p>
-                        <button class="btn btn-primary w-100">Buy Product</button>
+
+
+        <section id="categories-section" class="mx-lg-5 px-lg-5 mb-4">
+            <h2 class="text-center">Browse by Category</h2>
+            <p class="text-muted text-center mb-5">Explore different mediums to unleash your creativity</p>
+
+            <!-- Category Section -->
+            <div id="categories" class="row g-4 mx-sm-3 mx-md-5 mb-4">
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                    <div class="card h-100 learning-path-card">
+                        <div class="card-img-container">
+                            <span class="badge-pill-custom">Beginner</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h3 class="path-title mb-4">Drawing Basics</h3>
+                            <a href="#" class="view-resource-link mt-auto">
+                                View Resource <span class="ms-1">→</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-                <div class="card">
-                    <img src="./assets/images/zeztz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Zeztz Driver</p>
-                        <p class="card-text">$300.00</p>
-                        <button class="btn btn-primary w-100">Buy Product</button>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                    <div class="card h-100 learning-path-card">
+                        <div class="card-img-container">
+                            <span class="badge-pill-custom">Intermediate</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h3 class="path-title mb-4">Color Dynamics</h3>
+                            <a href="#" class="view-resource-link mt-auto">
+                                View Resource <span class="ms-1">→</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-                <div class="card">
-                    <img src="./assets/images/zeztz.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Zeztz Driver</p>
-                        <p class="card-text">$300.00</p>
-                        <button class="btn btn-primary w-100">Buy Product</button>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                    <div class="card h-100 learning-path-card">
+                        <div class="card-img-container">
+                            <span class="badge-pill-custom">Advanced</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h3 class="path-title mb-4">Traditional Canvas</h3>
+                            <a href="#" class="view-resource-link mt-auto">
+                                View Resource <span class="ms-1">→</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                    <div class="card h-100 learning-path-card">
+                        <div class="card-img-container">
+                            <span class="badge-pill-custom">Beginner</span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <h3 class="path-title mb-4">Digital Studio</h3>
+                            <a href="#" class="view-resource-link mt-auto">
+                                View Resource <span class="ms-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <!-- End of Category Section -->
-    
-        
-        <div class="row">
+            <!-- End of Category Section -->
+
             <!-- Sample Resources -->
-            <div id="resources" class="col-sm-12 col-md-6">
-                <h3>Sample Resources</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d810.4249318960382!2d139.70256050388414!3d35.65976735262073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1780989010900!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <section id="resources" class="row mx-sm-3 mx-md-5 mb-4">
+                <h2 class="text-center mb-4">Resources</h2>
+
+                <div class="col-sm-12 col-md-6 mb-5">
+                    <h3>Find our nearest physical location</h3>
+                    <p class="text-muted">Locate our physical stations and experience hands-on learning with us!</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d810.4249318960382!2d139.70256050388414!3d35.65976735262073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1780989010900!5m2!1sen!2sph" class="rounded-3" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="col-sm-12 col-md-6 mb-5">
+                    <h3>Featured Resource of the Month</h3>
+                    <div class="card rounded-4">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Color Atlas: Master the Arts of Color Theory</h5>
+                            <p class="card-text">Immerse yourself in the techniques and practices that veteran artists apply to their paintings, with a step-by-step guide on creating the perfect color mix.</p>
+                            <button class="btn btn-primary rounded-2">Read Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- End of Sample Resources -->
 
-            <!-- About Section -->
-            <div id="about" class="col-sm-12 col-md-6">
-                <h3>About</h3>
-                <div id="mission">
-                    <h4>Mission</h4>
-                    <p>Description</p>
+        </section>
+
+        <!-- About & Contact -->
+        <div class="about-contact-wrapper">
+            <h3>About Us</h3>
+            <div class="row text-center">
+                <!-- About Section -->
+                <div id="about" class="col-sm-12 col-md-6">
+                    <div id="mission">
+                        <h4>Our Mission</h4>
+                        <p class="fst-italic">"To make high-quality art education feel like an adventure rather than a chore, making foundational drawing and painting concepts accessible, engaging, and free for creators at all levels."</p>
+                    </div>
                 </div>
-                <i class="bi bi-envelope-fill"></i> your@email.com
-                <i class="bi bi-telephone-fill"></i> 123-456-7890
+                <!-- End of About Section -->
+
+                <!-- Contact Section -->
+                <div id="contact" class="col-sm-12 col-md-6">
+                    <h4>Contact Us</h4>
+                    <div class="d-flex flex-column align-items-center gap-1">
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>your@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>+1 123-456-7890</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Contact Section -->
             </div>
-            <!-- End of About Section -->
-            
         </div>
-        
+        <!-- End of About & Contact -->
+
     </div>
 
     <!-- Footer -->
-    <footer class="">
-    <div class="d-flex justify-content-center text-black-50">
-        <p class="text-center m-0">© 2026 HenshinXChange: All Rights Reserved
-        </p>
-    </div>
-
+    <footer>
+        <div class="d-flex justify-content-center">
+            <p class="text-center m-0">© 2026 Palette Town — All Rights Reserved</p>
+        </div>
     </footer>
     <!-- End of Footer -->
 
